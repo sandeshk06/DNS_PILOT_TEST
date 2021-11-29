@@ -1,0 +1,41 @@
+{% extends "home.html" %}
+{% block content %}
+<div>
+
+     {% if FAILED_COUNT == 0 %}
+         <div class="alert alert-primary" role="alert">
+               Success !! ALL hostname's are resolving
+         </div>
+     {% else %}
+         <div class="alert alert-danger" role="alert">
+                 Failed !! resolution failed for {{ FAILED_COUNT }} hostname
+         </div>
+
+     {% endif %}
+
+</div> 
+<div class="table-responsive">
+<table class="table table-bordered table-striped" >
+  <thead class="thead-dark ">
+    <tr>
+      <th scope="col">HOSTNAME</th>
+      <th scope="col">IP</th>
+    </tr>
+  </thead>
+  <tbody>
+
+      {% for hostname,ip in IP_STATUS.items() %}
+      <tr>
+      
+          <td>{{ hostname  }}</td>
+          <td>{{ ip }}</td>
+
+      </tr>
+
+      {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
+
+
