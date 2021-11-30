@@ -1,14 +1,14 @@
 # DNS PILOT TEST
 Used for testing domain name resolution.
 
-DNS PILOT TEST is simple python flask web application used for checking resolution of forword and reverse entries.
+DNS PILOT TEST is simple python flask web application used for checking dns name resolution. [ IP to Hostname && Hostname to IP ]
 
 #### Prerequisites:
 
 1. Python3
 2. git
 
-#### Python Packege : 
+#### Python Packege :  
 
 1. waitress 
 2. flask_wtf 
@@ -40,7 +40,7 @@ docker run -d --name dns_pilot_test -p 5000:5000  dns_pilot_test_v01
 #### Verify:
 docker ps 
 
-#### Using Docker compose file:
+#### Using docker-compose file:
 
 git clone https://github.com/sandeshk06/DNS_PILOT_TEST.git
 
@@ -56,13 +56,13 @@ docker-compose ps >> check for container is running or not
 
 ![Screenshot_2021-11-30 DNS LOOKUP](https://user-images.githubusercontent.com/16614184/144071314-43011264-0111-412e-8c7f-ac1050fdcd9f.png)
 
-### checking for IP  resolution
+### Checking for IP  resolution
 ![Screenshot_2021-11-30 DNS LOOKUP(1)](https://user-images.githubusercontent.com/16614184/144071593-92e408d3-df6f-4a28-af0e-0a106cab97e9.png)
 
 ### Result
 ![Screenshot_2021-11-30 DNS LOOKUP(2)](https://user-images.githubusercontent.com/16614184/144071804-88afd3c1-ff54-46cf-90ce-12166800b8b2.png)
 
-### checking for hostname resolution
+### Checking for hostname resolution
 ![Screenshot_2021-11-30 DNS LOOKUP(3)](https://user-images.githubusercontent.com/16614184/144071993-fb1155f3-54e9-4aef-9934-68353bf33ce5.png)
 
 ### Result
