@@ -37,6 +37,10 @@ DNS PILOT TEST is simple python flask web application used for checking dns name
 
  - docker run -d --name dns_pilot_test -p 5000:5000  dns_pilot_test_v01
 
+ - for checking private DNS entries internal to organization
+
+    - docker run -d --name dns_pilot_test -p 5000:5000 --network host dns_pilot_test_v01
+
 
 **Verify:**
  - docker ps 
