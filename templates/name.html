@@ -1,21 +1,19 @@
 {% extends "home.html" %}
 {% block content %}
-<form method="POST">
+
+<form method="POST" enctype="multipart/form-data" >
   <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>	
-  <div class="form-group">
-
-	  <label for="exampleFormControlTextarea1"><b>HOST NAME</b></label>
-    <div class="input-group input-group-lg">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-lg">FQDN</span>
-      </div>
-      <input type="text" class="form-control" aria-label="FQDN" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Hostname Here" name="hostname">
+  
+   <div class="input-group mb-3">
+    <label for="exampleFormControlFile1" class="text-primary">Upload File Containing Hostname List</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file">
+    <div class="input-group-append"> 
+    <input type="submit" class="btn btn-primary" value="UPLOAD">
     </div>
+  </div>
 
-
-   </div>
-       <button type="submit" class="btn btn-primary">Submit</button>
-   </div>
 </form>
 
 {% endblock %}
+
+

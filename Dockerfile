@@ -2,6 +2,7 @@ FROM alpine:latest
 LABEL maintainer="sandeshkulkarni1991@gmail.com"
 RUN apk add --update python3 py3-pip
 RUN pip3 install flask waitress ipaddress flask_wtf
+RUN mkdir -p /usr/local/src/DNS_RESOLVER/UPLOAD
 COPY dns_validator.py   /usr/local/src/DNS_RESOLVER/
 COPY dns_app.py   /usr/local/src/DNS_RESOLVER/
 COPY templates   /usr/local/src/DNS_RESOLVER/templates/
